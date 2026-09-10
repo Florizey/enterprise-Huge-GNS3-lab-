@@ -1,1 +1,3 @@
-Formatting '/home/alek/enterprise/project-files/qemu/c3ee830b-5033-49ab-8e99-55bbc491a85f/hda_disk.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=524288000 backing_file=/home/alek/GNS3/images/QEMU/frr-8.2.2.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16
+No errors were found on the image.
+1490/8000 = 18.62% allocated, 87.45% fragmented, 84.90% compressed clusters
+Image end offset: 56623104

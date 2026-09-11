@@ -1,0 +1,7 @@
+#!/bin/sh
+# Installed as /usr/lib/frr/docker-start, wrapping FRR's GNS3 start script (moved to
+# docker-start.frr) so services that run next to FRR come up on every container start.
+# The image CMD and the FRRDocker appliance start_command both point here, so new
+# nodes pick it up too. Output stays off the console (PID 1's stdout is the console).
+/usr/local/sbin/dhcp-relay-boot </dev/null >/var/log/dhcp-relay-boot.log 2>&1 &
+exec /usr/lib/frr/docker-start.frr "$@"

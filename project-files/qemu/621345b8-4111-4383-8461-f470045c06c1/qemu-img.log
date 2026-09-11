@@ -1,0 +1,1 @@
+Formatting '/home/alek/enterprise/project-files/qemu/621345b8-4111-4383-8461-f470045c06c1/hda_disk.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=2147483648 backing_file=/home/alek/GNS3/images/QEMU/debian-12.6.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16

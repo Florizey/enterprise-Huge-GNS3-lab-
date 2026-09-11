@@ -15,3 +15,12 @@ recv: Connection refused
 recv: Connection refused
 recv: Connection refused
 recv: Connection refused
+UDP tunnel connecting from local port 10028 to IPv4 address 127.0.0.1 on port 10029
+Destination NIO listener thread for bridge3 has started
+Source NIO listener thread for bridge3 has started
+send: Connection refused
+send: Connection refused
+send: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused

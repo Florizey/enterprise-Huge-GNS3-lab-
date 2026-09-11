@@ -3,5 +3,6 @@
 640:997:996:/etc/frr/frr.conf.sav
 640:997:996:/etc/frr/vtysh.conf
 644:0:0:/etc/frr/.gns3_perms
+666:0:0:/etc/frr/isc-dhcp-relay
 640:997:996:/etc/frr/frr.conf
 700:997:996:/etc/frr

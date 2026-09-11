@@ -1,0 +1,17 @@
+# Configuration for /etc/init.d/kea-dhcp4
+
+# Path to kea-dhcp4 configuration file.
+#cfgfile="/etc/kea/kea-dhcp4.conf"
+
+# Specifies the logging output; one of:
+# - stdout - log to standard output
+# - stderr - log to standard error
+# - syslog:<facility> - log via syslog (default facility is local0)
+# - <filepath> - log to file <filepath>
+#logger_dest="syslog"
+
+# The user (and group) to run kea-dhcp4 daemon.
+#command_user="kea"
+
+# Comment out to run without process supervisor.
+supervisor=supervise-daemon

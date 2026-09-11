@@ -1,5 +1,5 @@
 uBridge version 1.0.1 running with libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
-Hypervisor TCP control server started (IP 127.0.0.1 port 34721).
+Hypervisor TCP control server started (IP 127.0.0.1 port 44353).
 UDP tunnel connecting from local port 10004 to IPv4 address 127.0.0.1 on port 10005
 Source NIO listener thread for bridge0 has started
 Destination NIO listener thread for bridge0 has started
@@ -9,21 +9,10 @@ Destination NIO listener thread for bridge1 has started
 UDP tunnel connecting from local port 10003 to IPv4 address 127.0.0.1 on port 10002
 Source NIO listener thread for bridge2 has started
 Destination NIO listener thread for bridge2 has started
-send: Input/output error
-send: Input/output error
-send: Input/output error
-send: Input/output error
-send: Input/output error
-recv: Connection refused
-recv: Connection refused
-recv: Connection refused
-UDP tunnel connecting from local port 10054 to IPv4 address 127.0.0.1 on port 10055
+UDP tunnel connecting from local port 10020 to IPv4 address 127.0.0.1 on port 10021
 Source NIO listener thread for bridge3 has started
 Destination NIO listener thread for bridge3 has started
-send: Connection refused
-recv: Connection refused
-recv: Connection refused
-send: Connection refused
+send: Input/output error
 recv: Connection refused
 recv: Connection refused
 recv: Connection refused
@@ -35,30 +24,20 @@ recv: Connection refused
 recv: Connection refused
 recv: Connection refused
 recv: Connection refused
-send: Connection refused
-recv: Connection refused
-recv: Connection refused
 recv: Connection refused
 recv: Connection refused
 send: Connection refused
 recv: Connection refused
-send: Connection refused
 recv: Connection refused
 send: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
 send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
-send: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+UDP tunnel connecting from local port 10005 to IPv4 address 127.0.0.1 on port 10054
+Source NIO listener thread for bridge0 has started
+Destination NIO listener thread for bridge0 has started

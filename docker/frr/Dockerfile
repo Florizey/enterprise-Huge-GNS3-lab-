@@ -14,3 +14,9 @@ RUN mv /usr/lib/frr /usr/libexec/frr \
 # /etc/pam.d/frr has no account stack, so every vtysh call printed
 # "vtysh_pam: Failed in account validation".
 RUN printf 'account\tsufficient\tpam_permit.so\n' >> /etc/pam.d/frr
+
+# iptables for NAT/PAT on edge routers (e.g. MASQUERADE out the NAT-facing interface).
+# Rules are applied at boot from the node's /etc/network/interfaces, which GNS3 persists.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends iptables \
+    && rm -rf /var/lib/apt/lists/*

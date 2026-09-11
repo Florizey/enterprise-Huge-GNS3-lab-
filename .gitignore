@@ -1,0 +1,8 @@
+# Alpine Docker nodes persist their whole filesystem (see extra_volumes in enterprise.gns3).
+# Keep configs (/etc, /root, /home, /var/lib, ...) in git; skip package binaries and caches,
+# which can be reinstalled from each node's etc/apk/world.
+project-files/docker/*/bin/
+project-files/docker/*/sbin/
+project-files/docker/*/lib/
+project-files/docker/*/usr/
+project-files/docker/*/var/cache/

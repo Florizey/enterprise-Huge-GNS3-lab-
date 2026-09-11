@@ -1,0 +1,98 @@
+{
+  "frr-interface:lib": {
+    "interface": [
+      {
+        "name": "eth0",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "192.168.2.10",
+              "prefix-length": 24
+            }
+          ]
+        }
+      },
+      {
+        "name": "eth1"
+      }
+    ]
+  },
+  "frr-routing:routing": {
+    "control-plane-protocols": {
+      "control-plane-protocol": [
+        {
+          "type": "frr-staticd:staticd",
+          "name": "staticd",
+          "vrf": "default",
+          "frr-staticd:staticd": {
+            "route-list": [
+              {
+                "prefix": "0.0.0.0/0",
+                "src-prefix": "::/0",
+                "afi-safi": "frr-routing:ipv4-unicast",
+                "path-list": [
+                  {
+                    "table-id": 0,
+                    "distance": 1,
+                    "frr-nexthops": {
+                      "nexthop": [
+                        {
+                          "nh-type": "ip4",
+                          "vrf": "default",
+                          "gateway": "192.168.122.1",
+                          "interface": "(null)"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "prefix": "192.168.1.0/24",
+                "src-prefix": "::/0",
+                "afi-safi": "frr-routing:ipv4-unicast",
+                "path-list": [
+                  {
+                    "table-id": 0,
+                    "distance": 1,
+                    "frr-nexthops": {
+                      "nexthop": [
+                        {
+                          "nh-type": "ip4",
+                          "vrf": "default",
+                          "gateway": "192.168.10.1",
+                          "interface": "(null)"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "prefix": "192.168.11.0/24",
+                "src-prefix": "::/0",
+                "afi-safi": "frr-routing:ipv4-unicast",
+                "path-list": [
+                  {
+                    "table-id": 0,
+                    "distance": 1,
+                    "frr-nexthops": {
+                      "nexthop": [
+                        {
+                          "nh-type": "ip4",
+                          "vrf": "default",
+                          "gateway": "192.168.10.1",
+                          "interface": "(null)"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -18,5 +18,5 @@
 #iface eth0 inet dhcp
 #	hostname AlpineLinux-4
 auto eth0
-iface eth0 dhcp
+iface eth0 inet dhcp
 

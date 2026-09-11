@@ -1,15 +1,17 @@
 uBridge version 1.0.1 running with libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
-Hypervisor TCP control server started (IP 127.0.0.1 port 46193).
-UDP tunnel connecting from local port 10034 to IPv4 address 127.0.0.1 on port 10035
+Hypervisor TCP control server started (IP 127.0.0.1 port 38743).
+UDP tunnel connecting from local port 10030 to IPv4 address 127.0.0.1 on port 10031
 Source NIO listener thread for bridge0 has started
 Destination NIO listener thread for bridge0 has started
-UDP tunnel connecting from local port 10039 to IPv4 address 127.0.0.1 on port 10038
+UDP tunnel connecting from local port 10035 to IPv4 address 127.0.0.1 on port 10034
 Source NIO listener thread for bridge1 has started
 Destination NIO listener thread for bridge1 has started
-UDP tunnel connecting from local port 10041 to IPv4 address 127.0.0.1 on port 10040
+UDP tunnel connecting from local port 10037 to IPv4 address 127.0.0.1 on port 10036
 Source NIO listener thread for bridge2 has started
 Destination NIO listener thread for bridge2 has started
-UDP tunnel connecting from local port 10043 to IPv4 address 127.0.0.1 on port 10042
+send: Input/output error
+send: Input/output error
+UDP tunnel connecting from local port 10039 to IPv4 address 127.0.0.1 on port 10038
 Source NIO listener thread for bridge3 has started
 Destination NIO listener thread for bridge3 has started
 send: Input/output error
@@ -24,19 +26,8 @@ recv: Connection refused
 recv: Connection refused
 recv: Connection refused
 recv: Connection refused
-recv: Bad address
-Source NIO listener thread for bridge3 has stopped because of an error: Bad address 
-recv: Bad address
-Source NIO listener thread for bridge2 has stopped because of an error: Bad address 
-recv: Bad address
-Source NIO listener thread for bridge1 has stopped because of an error: Bad address 
-recv: Bad address
-Source NIO listener thread for bridge0 has stopped because of an error: Bad address 
-send: File descriptor in bad state
-Destination NIO listener thread for bridge0 has stopped because of an error: File descriptor in bad state 
-send: File descriptor in bad state
-Destination NIO listener thread for bridge3 has stopped because of an error: File descriptor in bad state 
-send: File descriptor in bad state
-Destination NIO listener thread for bridge2 has stopped because of an error: File descriptor in bad state 
-send: File descriptor in bad state
-Destination NIO listener thread for bridge1 has stopped because of an error: File descriptor in bad state 
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+send: Connection refused

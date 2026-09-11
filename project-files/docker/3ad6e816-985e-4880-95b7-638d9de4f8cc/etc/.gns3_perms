@@ -33,7 +33,6 @@
 755:0:0:/etc/apk
 644:0:0:/etc/fstab
 644:0:0:/etc/protocols
-666:0:0:/etc/marker
 644:0:0:/etc/passwd
 644:0:0:/etc/profile
 644:0:0:/etc/nsswitch.conf
@@ -62,7 +61,7 @@
 755:0:0:/etc/profile.d
 644:0:0:/etc/busybox-paths.d/busybox
 755:0:0:/etc/busybox-paths.d
-755:0:0:/etc/resolv.conf
+666:0:0:/etc/resolv.conf
 755:0:0:/etc/network/if-down.d
 775:1000:1000:/etc/network/interfaces.d
 755:0:0:/etc/network/if-post-down.d

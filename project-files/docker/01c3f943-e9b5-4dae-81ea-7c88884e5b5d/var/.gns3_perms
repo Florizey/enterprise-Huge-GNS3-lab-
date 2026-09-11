@@ -16,6 +16,8 @@
 755:0:0:/var/cache/misc
 755:0:0:/var/cache
 777:0:0:/var/lock
+640:0:0:/var/lib/kea/kea-leases4.csv
+640:0:0:/var/lib/kea/kea-leases4.csv.2
 750:100:101:/var/lib/kea
 755:0:0:/var/lib/misc
 755:0:0:/var/lib

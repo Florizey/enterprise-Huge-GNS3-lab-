@@ -1,16 +1,29 @@
 uBridge version 1.0.1 running with libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
-Hypervisor TCP control server started (IP 127.0.0.1 port 41243).
-UDP tunnel connecting from local port 10023 to IPv4 address 127.0.0.1 on port 10022
+Hypervisor TCP control server started (IP 127.0.0.1 port 42347).
+UDP tunnel connecting from local port 10019 to IPv4 address 127.0.0.1 on port 10018
 Source NIO listener thread for bridge0 has started
 Destination NIO listener thread for bridge0 has started
-UDP tunnel connecting from local port 10024 to IPv4 address 127.0.0.1 on port 10025
+UDP tunnel connecting from local port 10020 to IPv4 address 127.0.0.1 on port 10021
 Source NIO listener thread for bridge1 has started
 Destination NIO listener thread for bridge1 has started
-UDP tunnel connecting from local port 10026 to IPv4 address 127.0.0.1 on port 10027
+UDP tunnel connecting from local port 10022 to IPv4 address 127.0.0.1 on port 10023
 Source NIO listener thread for bridge2 has started
 Destination NIO listener thread for bridge2 has started
 send: Input/output error
 send: Input/output error
 send: Input/output error
 send: Input/output error
+send: Input/output error
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+UDP tunnel connecting from local port 10044 to IPv4 address 127.0.0.1 on port 10045
+Source NIO listener thread for bridge0 has started
+Destination NIO listener thread for bridge0 has started
+recv: Connection refused
 recv: Connection refused

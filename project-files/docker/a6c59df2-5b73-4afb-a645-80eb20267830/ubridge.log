@@ -1,26 +1,31 @@
 uBridge version 1.0.1 running with libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
-Hypervisor TCP control server started (IP 127.0.0.1 port 41371).
-UDP tunnel connecting from local port 10054 to IPv4 address 127.0.0.1 on port 10005
+Hypervisor TCP control server started (IP 127.0.0.1 port 44443).
+UDP tunnel connecting from local port 10009 to IPv4 address 127.0.0.1 on port 10008
 Source NIO listener thread for bridge0 has started
 Destination NIO listener thread for bridge0 has started
-UDP tunnel connecting from local port 10006 to IPv4 address 127.0.0.1 on port 10007
+send: Input/output error
+UDP tunnel connecting from local port 10010 to IPv4 address 127.0.0.1 on port 10011
 Source NIO listener thread for bridge1 has started
 Destination NIO listener thread for bridge1 has started
-UDP tunnel connecting from local port 10056 to IPv4 address 127.0.0.1 on port 10017
+send: Input/output error
+UDP tunnel connecting from local port 10017 to IPv4 address 127.0.0.1 on port 10016
 Source NIO listener thread for bridge2 has started
 Destination NIO listener thread for bridge2 has started
-recv: Connection refused
-recv: Connection refused
-recv: Connection refused
-recv: Connection refused
-recv: Connection refused
-recv: Connection refused
-UDP tunnel connecting from local port 10028 to IPv4 address 127.0.0.1 on port 10029
-Destination NIO listener thread for bridge3 has started
+UDP tunnel connecting from local port 10024 to IPv4 address 127.0.0.1 on port 10025
 Source NIO listener thread for bridge3 has started
-send: Connection refused
-send: Connection refused
-send: Connection refused
+Destination NIO listener thread for bridge3 has started
+send: Input/output error
+send: Input/output error
 recv: Connection refused
 recv: Connection refused
 recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+recv: Connection refused
+UDP tunnel connecting from local port 10045 to IPv4 address 127.0.0.1 on port 10044
+Source NIO listener thread for bridge2 has started
+Destination NIO listener thread for bridge2 has started

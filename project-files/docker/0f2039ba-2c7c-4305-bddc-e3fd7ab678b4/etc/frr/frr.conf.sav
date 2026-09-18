@@ -1,0 +1,19 @@
+frr version 10.3
+frr defaults traditional
+hostname iBGP1
+log syslog informational
+service integrated-vtysh-config
+!
+interface l0
+ ip address 1.1.1.1/32
+exit
+!
+router ospf
+ network 1.1.1.1/32 area 0
+exit
+!
+segment-routing
+ traffic-eng
+ exit
+exit
+!

@@ -1,0 +1,25 @@
+frr version 10.3
+frr defaults traditional
+hostname FRRDocker-7
+log syslog informational
+service integrated-vtysh-config
+!
+interface eth0
+ ip address 10.0.3.10/24
+exit
+!
+interface eth1
+ ip address 10.0.0.2/24
+ ip address 10.0.0.4/24
+exit
+!
+router ospf
+ network 10.0.0.0/24 area 1
+ network 10.0.3.0/24 area 1
+exit
+!
+segment-routing
+ traffic-eng
+ exit
+exit
+!

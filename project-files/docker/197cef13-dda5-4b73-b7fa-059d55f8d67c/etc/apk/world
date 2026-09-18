@@ -1,0 +1,10 @@
+alpine-baselayout
+alpine-keys
+alpine-release
+apk-tools
+busybox
+falkon
+firefox
+musl-utils
+xauth
+xf86-video-vesa

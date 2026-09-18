@@ -1,0 +1,9 @@
+{
+  "frr-interface:lib": {
+    "interface": [
+      {
+        "name": "l0"
+      }
+    ]
+  }
+}

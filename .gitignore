@@ -1,0 +1,16 @@
+# Alpine Docker nodes persist their whole filesystem (see extra_volumes in enterprise.gns3).
+# Keep configs (/etc, /root, /home, /var/lib, ...) in git; skip package binaries and caches,
+# which can be reinstalled from each node's etc/apk/world.
+project-files/docker/*/bin/
+project-files/docker/*/sbin/
+project-files/docker/*/lib/
+project-files/docker/*/usr/
+project-files/docker/*/var/cache/
+'The appliances you need'/
+*.log
+
+# QEMU node disk images: multi-GB binaries that GNS3 rewrites on every lab run.
+# Tracking them made `git status` take ~40s (git re-hashes them each time) and
+# accounted for ~2 GB of the ~2 GB repo. Recreate them from the appliance images.
+*.qcow2
+*.qcow

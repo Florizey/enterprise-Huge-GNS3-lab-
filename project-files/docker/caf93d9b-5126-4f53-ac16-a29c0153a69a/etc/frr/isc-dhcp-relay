@@ -1,0 +1,10 @@
+# Configuration for isc-dhcp-relay.  Read by /usr/local/sbin/dhcp-relay-boot at
+# container start and by /etc/init.d/isc-dhcp-relay (/etc/default/isc-dhcp-relay
+# is a symlink to this file).
+#
+# SERVERS:    DHCP server(s) to relay to.  Empty = relay stays off.
+# INTERFACES: legacy list; left empty, -id/-iu in OPTIONS is authoritative.
+# OPTIONS:    -id <ifname> downstream (client LAN), -iu <ifname> upstream (toward server).
+SERVERS="192.168.3.1"
+INTERFACES=""
+OPTIONS="-id eth0 -iu eth1"

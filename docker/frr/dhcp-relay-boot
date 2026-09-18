@@ -1,0 +1,46 @@
+#!/bin/sh
+# Start the ISC DHCP relay (dhcrelay) at container boot. Run in the background by
+# /usr/lib/frr/docker-start; output goes to /var/log/dhcp-relay-boot.log.
+#
+# The config lives in /etc/frr/isc-dhcp-relay because /etc/frr is one of the few
+# directories GNS3 persists for FRRDocker nodes (/etc/default is rebuilt from the
+# image). /etc/default/isc-dhcp-relay is a symlink to it, so the stock init script
+# and docs still apply. Nodes whose /etc/frr predates this image get a blank copy
+# seeded here. While SERVERS is empty the relay stays off.
+CONF=/etc/frr/isc-dhcp-relay
+TEMPLATE=/usr/local/share/dhcp-relay/isc-dhcp-relay.default
+
+[ -e "$CONF" ] || cp "$TEMPLATE" "$CONF"
+. "$CONF"
+
+if [ -z "$SERVERS" ]; then
+    echo "SERVERS is empty in $CONF, relay not started"
+    exit 0
+fi
+
+# zebra assigns interface addresses from frr.conf shortly after FRR starts, and
+# dhcrelay needs them when it starts. Wait for every interface named in INTERFACES
+# or in OPTIONS (-i/-id/-iu <ifname>) to have an IPv4 address, up to 60s.
+ifaces=$INTERFACES
+next=
+for w in $OPTIONS; do
+    [ -n "$next" ] && ifaces="$ifaces $w"
+    case $w in -i|-id|-iu) next=1 ;; *) next= ;; esac
+done
+for _ in $(seq 60); do
+    missing=
+    for i in $ifaces; do
+        ip -4 -o addr show dev "$i" 2>/dev/null | grep -q inet || missing="$missing $i"
+    done
+    [ -z "$missing" ] && break
+    sleep 1
+done
+[ -n "$missing" ] && echo "no IPv4 address on$missing after 60s, starting anyway"
+
+/etc/init.d/isc-dhcp-relay start
+sleep 1
+if pidof dhcrelay >/dev/null; then
+    echo "dhcrelay running: $(tr '\0' ' ' < /proc/$(pidof -s dhcrelay)/cmdline)"
+else
+    echo "dhcrelay failed to start (errors above)"
+fi

@@ -1,0 +1,4 @@
+Start QEMU with /usr/bin/qemu-system-x86_64 -name Debian12.6-5 -m 512M -smp cpus=1,sockets=1 -enable-kvm -machine smm=off -boot order=c -device virtio-scsi-pci,id=scsi0 -drive file=/home/alek/enterprise/project-files/qemu/0ea544f8-9868-4aee-96fe-4c34d3e8512f/hda_disk.qcow2,if=none,id=drive0,index=0,media=disk -device scsi-hd,drive=drive0 -uuid 0ea544f8-9868-4aee-96fe-4c34d3e8512f -serial telnet:127.0.0.1:5005,server,nowait -monitor tcp:127.0.0.1:38403,server,nowait -net none -device virtio-net-pci,mac=0c:a5:44:f8:00:00,speed=10000,duplex=full,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10065,localaddr=127.0.0.1:10064 -display none
+
+Execution log:
+qemu-system-x86_64: warning: host doesn't support requested feature: CPUID[eax=80000001h].ECX.svm [bit 2]

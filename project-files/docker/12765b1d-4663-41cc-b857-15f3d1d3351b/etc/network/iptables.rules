@@ -1,0 +1,24 @@
+*filter
+:INPUT DROP [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT ! -i eth2 -p 89 -j ACCEPT
+-A INPUT -d 192.168.1.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.2.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.3.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.4.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.5.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.10.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.11.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.12.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.13.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -d 192.168.14.0/24 -i eth2 -p tcp -m multiport --dports 80,443,22 -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+COMMIT
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o eth2 -j MASQUERADE
+COMMIT

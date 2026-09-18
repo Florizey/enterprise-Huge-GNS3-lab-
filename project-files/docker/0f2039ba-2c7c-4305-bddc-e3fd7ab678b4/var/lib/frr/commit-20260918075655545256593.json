@@ -1,0 +1,20 @@
+{
+  "frr-interface:lib": {
+    "interface": [
+      {
+        "name": "eth1"
+      },
+      {
+        "name": "l0",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "1.1.1.1",
+              "prefix-length": 32
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

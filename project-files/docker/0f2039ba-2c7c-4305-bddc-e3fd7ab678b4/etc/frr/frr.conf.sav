@@ -4,12 +4,42 @@ hostname iBGP1
 log syslog informational
 service integrated-vtysh-config
 !
+interface eth1
+ ip address 172.16.0.3/24
+exit
+!
+interface eth4
+ ip address 192.168.2.1/30
+exit
+!
+interface eth6
+ ip address 192.168.0.1/30
+exit
+!
+interface l
+ ip address 10.10.10.2/32
+exit
+!
 interface l0
  ip address 1.1.1.1/32
 exit
 !
+interface lo
+ ip address 10.10.10.2/32
+exit
+!
+router bgp 65001
+ neighbor 10.10.10.1 remote-as 65001
+ neighbor 10.10.10.1 update-source lo
+ neighbor 10.10.10.3 remote-as 65001
+ neighbor 10.10.10.3 update-source lo
+exit
+!
 router ospf
  network 1.1.1.1/32 area 0
+ network 10.10.10.2/32 area 0
+ network 172.16.0.0/24 area 0
+ network 192.168.0.0/16 area 0
 exit
 !
 segment-routing

@@ -130,8 +130,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"82\" height=\"26\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">ospf area 2 </text></svg>",
-                "x": -488,
-                "y": -566,
+                "x": -420,
+                "y": -576,
                 "z": 2
             }
         ],
@@ -1247,8 +1247,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "eth0",
-                            "x": 30,
-                            "y": -15
+                            "x": 22,
+                            "y": -25
                         },
                         "node_id": "05182475-0091-4013-8fce-37e7fca44899",
                         "port_number": 0
@@ -1443,6 +1443,42 @@
                             "y": 53
                         },
                         "node_id": "edfab02d-37e3-4484-b4d2-a8cb341e30b1",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "a8dfa47b-0162-440e-aeb5-1d1e515da03a",
+                "link_style": {
+                    "color": "#000000",
+                    "type": 1,
+                    "width": 2
+                },
+                "nodes": [
+                    {
+                        "adapter_number": 4,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "eth4",
+                            "x": 72,
+                            "y": 21
+                        },
+                        "node_id": "0f2039ba-2c7c-4305-bddc-e3fd7ab678b4",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 4,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "eth4",
+                            "x": -6,
+                            "y": 22
+                        },
+                        "node_id": "5a5d5d3e-2d21-49b0-ae3d-4bf9dfc7af4f",
                         "port_number": 0
                     }
                 ],
@@ -2022,8 +2058,8 @@
                 "symbol": ":/symbols/nat.svg",
                 "template_id": "df8f4ea9-33b7-3e96-86a2-c39bc9bb649c",
                 "width": 159,
-                "x": -45,
-                "y": -872,
+                "x": -25,
+                "y": -876,
                 "z": 1
             },
             {
@@ -2986,8 +3022,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "361a3485-cf9c-4a97-8bbe-cf5704d86527",
                 "width": 66,
-                "x": -50,
-                "y": -549,
+                "x": -48,
+                "y": -545,
                 "z": 1
             },
             {
@@ -3060,19 +3096,19 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1280x800",
-                    "container_id": "4c17f2890395cb3bb20e59bb62fe7faed964144e7d18d3dd16145160e46dc3d2",
+                    "container_id": "d59505b13378554b4f7d418a6b5ded4a7b3b9fdd46051764c1a9e6a4afe7ea32",
                     "environment": "FRR_PROFILE=full\nTERM=xterm",
                     "extra_hosts": null,
                     "extra_volumes": [],
                     "image": "gns3-frr:latest",
                     "mac_address": "02:42:18:24:75:00",
-                    "start_command": "/usr/lib/frr/docker-start",
+                    "start_command": "/bin/sh /etc/frr/nat-boot",
                     "usage": "The console opens directly in the FRR CLI (vtysh). Type 'exit' to reach a Linux shell; run 'vtysh' to return to the routing CLI. Save your config with 'write memory'."
                 },
                 "symbol": ":/symbols/router.svg",
                 "template_id": "361a3485-cf9c-4a97-8bbe-cf5704d86527",
                 "width": 66,
-                "x": 11,
+                "x": 21,
                 "y": -686,
                 "z": 1
             },

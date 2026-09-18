@@ -1,10 +1,56 @@
-# default to using syslog. /etc/rsyslog.d/45-frr.conf places the log in
-# /var/log/frr/frr.log
-#
-# Note:
-# FRR's configuration shell, vtysh, dynamically edits the live, in-memory
-# configuration while FRR is running. When instructed, vtysh will persist the
-# live configuration to this file, overwriting its contents. If you want to
-# avoid this, you can edit this file manually before starting FRR, or instruct
-# vtysh to write configuration to a different file.
+frr version 10.3
+frr defaults traditional
+hostname eBGP1
 log syslog informational
+service integrated-vtysh-config
+!
+ip route 0.0.0.0/0 192.168.122.1
+!
+interface eth0
+ ip address 192.168.122.2/24
+exit
+!
+interface eth1
+ ip address 192.168.1.2/30
+exit
+!
+interface eth6
+ ip address 192.168.0.2/30
+exit
+!
+interface l
+ ip address 10.10.10.1/32
+exit
+!
+interface l0
+ ip address 3.3.3.3/32
+exit
+!
+interface lo
+ ip address 10.10.10.1/32
+exit
+!
+router bgp 65001
+ neighbor 10.10.10.2 remote-as 65001
+ neighbor 10.10.10.2 update-source lo
+ neighbor 10.10.10.3 remote-as 65001
+ neighbor 10.10.10.3 update-source lo
+ !
+ address-family ipv4 unicast
+  network 0.0.0.0/0
+  neighbor 10.10.10.2 next-hop-self
+  neighbor 10.10.10.3 next-hop-self
+ exit-address-family
+exit
+!
+router ospf
+ network 10.10.10.1/32 area 0
+ network 192.168.0.0/30 area 0
+ network 192.168.1.0/24 area 0
+exit
+!
+segment-routing
+ traffic-eng
+ exit
+exit
+!

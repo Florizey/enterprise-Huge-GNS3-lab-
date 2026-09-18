@@ -21,9 +21,9 @@ interface eth24
 exit
 !
 router ospf
- network 192.168.0.0/24 area 0
- network 192.168.1.0/24 area 0
- network 192.168.3.0/24 area 0
+ network 192.168.0.0/24 area 2
+ network 192.168.1.0/24 area 2
+ network 192.168.3.0/24 area 2
 exit
 !
 segment-routing

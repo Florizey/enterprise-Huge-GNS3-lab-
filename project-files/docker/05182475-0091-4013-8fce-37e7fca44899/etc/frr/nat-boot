@@ -1,0 +1,26 @@
+#!/bin/sh
+# Masquerade traffic leaving the outside interface so that internally-sourced
+# packets get rewritten to eBGP1's own outside address before they reach the
+# upstream GNS3/libvirt NAT gateway.
+#
+# Without this, packets from the inside prefixes (172.16.0.0/24, 192.168.0.0/30,
+# and anything else following the BGP default route) leave OUT_IF with their
+# original private source. The upstream gateway only masquerades
+# -s 192.168.122.0/24 and has no route back to those prefixes, so replies never
+# return: the default route looks correct in the RIB but nothing can be pinged.
+# Traffic to LOCAL_NET itself is excluded so the on-link next hop is untouched.
+# BGP and OSPF are unaffected; neither traverses OUT_IF.
+#
+# This file lives in /etc/frr because that is one of the few directories GNS3
+# persists for FRRDocker nodes. It is invoked by this node's GNS3 start command
+# and hands off to the image's normal entrypoint, so FRR still comes up the same
+# way. Failures here are logged but never block that hand-off.
+OUT_IF=eth0
+LOCAL_NET=192.168.122.0/24
+
+{
+    iptables -t nat -C POSTROUTING -o "$OUT_IF" ! -d "$LOCAL_NET" -j MASQUERADE 2>/dev/null ||
+        iptables -t nat -A POSTROUTING -o "$OUT_IF" ! -d "$LOCAL_NET" -j MASQUERADE
+} </dev/null >/var/log/nat-boot.log 2>&1
+
+exec /usr/lib/frr/docker-start "$@"

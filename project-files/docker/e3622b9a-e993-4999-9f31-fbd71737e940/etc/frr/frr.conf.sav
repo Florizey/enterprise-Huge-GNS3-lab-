@@ -8,6 +8,10 @@ interface eth0
  ip address 10.0.1.10/24
 exit
 !
+interface eth1
+ ip address 10.0.0.2/24
+exit
+!
 router ospf
  network 10.0.0.0/24 area 1
  network 10.0.1.0/24 area 1

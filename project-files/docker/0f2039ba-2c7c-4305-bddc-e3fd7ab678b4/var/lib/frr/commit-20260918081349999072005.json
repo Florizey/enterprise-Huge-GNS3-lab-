@@ -13,6 +13,17 @@
         }
       },
       {
+        "name": "eth6",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "192.168.0.1",
+              "prefix-length": 32
+            }
+          ]
+        }
+      },
+      {
         "name": "l0",
         "frr-zebra:zebra": {
           "ipv4-addrs": [

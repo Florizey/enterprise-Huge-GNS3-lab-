@@ -1,9 +1,9 @@
 640:1000:1000:/etc/frr/daemons
 640:1000:1000:/etc/frr/support_bundle_commands.conf
 666:1000:1000:/etc/frr/isc-dhcp-relay.bak
-640:1000:1000:/etc/frr/frr.conf.sav
+640:997:996:/etc/frr/frr.conf.sav
 640:1000:1000:/etc/frr/vtysh.conf
 644:1000:1000:/etc/frr/.gns3_perms
 644:1000:1000:/etc/frr/isc-dhcp-relay
-640:1000:1000:/etc/frr/frr.conf
+640:997:996:/etc/frr/frr.conf
 700:1000:1000:/etc/frr

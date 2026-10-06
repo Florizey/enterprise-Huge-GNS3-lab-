@@ -1,0 +1,72 @@
+{
+  "frr-interface:lib": {
+    "interface": [
+      {
+        "name": "eth0",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "192.168.1.1",
+              "prefix-length": 30
+            }
+          ]
+        }
+      },
+      {
+        "name": "eth1",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "172.16.0.4",
+              "prefix-length": 24
+            }
+          ]
+        }
+      },
+      {
+        "name": "eth4",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "192.168.2.2",
+              "prefix-length": 30
+            }
+          ]
+        }
+      },
+      {
+        "name": "l",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "10.10.10.3",
+              "prefix-length": 32
+            }
+          ]
+        }
+      },
+      {
+        "name": "l0",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "2.2.2.2",
+              "prefix-length": 32
+            }
+          ]
+        }
+      },
+      {
+        "name": "lo",
+        "frr-zebra:zebra": {
+          "ipv4-addrs": [
+            {
+              "ip": "10.10.10.3",
+              "prefix-length": 32
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 755:1000:1000:/var/opt
 755:1000:1000:/var/log
 755:1000:1000:/var/local
-644:1000:1000:/var/.gns3_perms
+664:1000:1000:/var/.gns3_perms
 555:1000:1000:/var/empty
 777:1000:1000:/var/run
 777:1000:1000:/var/spool/cron/crontabs

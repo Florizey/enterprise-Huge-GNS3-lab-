@@ -3,5 +3,6 @@ alpine-keys
 alpine-release
 apk-tools
 busybox
+curl
 musl-utils
 python3

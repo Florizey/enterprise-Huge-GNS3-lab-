@@ -1,9 +1,0 @@
-{
-  "frr-interface:lib": {
-    "interface": [
-      {
-        "name": "eth0"
-      }
-    ]
-  }
-}

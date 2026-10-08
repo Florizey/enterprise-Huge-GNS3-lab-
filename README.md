@@ -4,3 +4,5 @@ Enterprise is a virtual lab environment with configured network connectivity. Us
 
 
 Updated: Currently expanding the lab, problems with its installation may occur.
+
+![09-30-2026 project state](images/GNS3.png)

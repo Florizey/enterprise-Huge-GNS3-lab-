@@ -67,8 +67,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"102\" height=\"26\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.2.0/24 </text></svg>",
-                "x": -278,
-                "y": 293,
+                "x": -281,
+                "y": 294,
                 "z": 2
             },
             {
@@ -3451,8 +3451,8 @@
                 "symbol": "linux_guest.svg",
                 "template_id": "b3d04681-2786-473a-9a67-5e871344142f",
                 "width": 65,
-                "x": -267,
-                "y": 222,
+                "x": -252,
+                "y": 216,
                 "z": 1
             },
             {
